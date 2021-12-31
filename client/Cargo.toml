@@ -1,0 +1,11 @@
+[package]
+name = "client"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+base_classifier = { path = "../base_classifier", version = "0.1.0" }
+python_classifier = { path = "../python_classifier", version = "0.1.0" }
+rust_classifier = { path = "../rust_classifier", version = "0.1.0" }

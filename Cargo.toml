@@ -1,0 +1,7 @@
+[workspace]
+members=[
+    "base_classifier",
+    "client",
+    "python_classifier",
+    "rust_classifier",
+]
