@@ -1,5 +1,6 @@
 use base_classifier::classifier::Classifier;
-use base_classifier::classifier_result::ClassifierResult;
+use base_classifier::classified_message::ClassifiedMessage;
+use base_classifier::error::Error;
 
 pub struct TestClassifier {
 }
@@ -11,7 +12,7 @@ impl TestClassifier {
 }
 
 impl Classifier for TestClassifier {
-  fn classify<'a>(&self, message: &'a str) -> ClassifierResult<'a> {
-    ClassifierResult::new(message, vec!["from-rust".to_owned()])
+  fn classify<'a>(&self, message: &'a str) -> Result<ClassifiedMessage<'a>, Error> {
+    Ok(ClassifiedMessage::new(message, vec!["from-rust".to_owned()]))
   }
 }

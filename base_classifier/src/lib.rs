@@ -1,2 +1,3 @@
 pub mod classifier;
-pub mod classifier_result;
+pub mod classified_message;
+pub mod error;
